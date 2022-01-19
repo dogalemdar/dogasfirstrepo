@@ -15,16 +15,19 @@ mpgData$am <- factor(mpgData$am, labels = c("Automatic", "Manual"))
 ui <- fluidPage(
   
   # App title ----
-  titlePanel("Miles Per Gallon"),
+  titlePanel("Miles Per Gallon Vs ..."),
   
+
   # Sidebar layout with input and output definitions ----
   sidebarLayout(
+  
     
     # Sidebar panel for inputs ----
     sidebarPanel(
-      
+      div("This app was designed spesifically for HW 4 of IE 421, fall 2021-2022."),
+
       # Input: Selector for variable to plot against mpg ----
-      selectInput("variable", "Variable:",
+      selectInput("variable", " Variable:",
                   c("Cylinders" = "cyl",
                     "Transmission" = "am",
                     "Gears" = "gear")),
